@@ -20,6 +20,9 @@ services:
       - "./certs/ca-root/ca.crt:/tmp/certs/root.crt:ro"
       - "./conf/php-local.ini:/usr/local/etc/php/conf.d/local.ini:ro"
       - "./conf/wp-local-config.php:/usr/local/etc/php/autoprepend.php:ro"
+# If you want to run a Wordpress multisite then uncomment ONE of these:
+#      - "./conf/wp-multisite-subdomains.htaccess:/var/www/html/.htaccess:ro"
+#      - "./conf/wp-multisite-subdirectories.htaccess:/var/www/html/.htaccess:ro"
       - "./src/vip-go-mu-plugins:/var/www/html/wp-content/mu-plugins"
       - "./src/wp/client-mu-plugins:/var/www/html/wp-content/client-mu-plugins"
       - "./src/wp/images:/var/www/html/wp-content/images"
